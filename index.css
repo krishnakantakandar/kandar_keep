@@ -41,7 +41,7 @@ textarea{
    height: 30px;
   
    width: 90px;
-   border: 1px solid black;
+ 
 
 }
 .btn-div button{
@@ -82,6 +82,20 @@ body{
     box-shadow: 0 0 0 , 0 1px 10px 0 ;
     background-color: aliceblue;
 }
+.count{
+    float: right;
+    margin-top: 2%;
+    height: 30px;
+    box-shadow: 0 0 0 , 0 1px 10px 0 black ;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    width: 200px;
+    color: chocolate;
+    padding: 1%;
+    margin-right:1% ;
+
+
+
+}
 @media screen and (max-width:500px){
     .note{
         background-color: rgb(255, 255, 255);
@@ -95,6 +109,7 @@ body{
          
         
      }
+
  
      
 

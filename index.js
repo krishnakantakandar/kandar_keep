@@ -9,9 +9,12 @@ const updateLocalStorageArea =()=>{
     })
     // console.log(notes);
     localStorage.setItem('notes',JSON.stringify(notes));// we can pass only string (json)'notes' is key
+    localStorage.setItem('count',JSON.stringify(notes.length));
+    
 }
 
 const addNewNote = (text = '') =>{
+
     const note = document.createElement('div');
     note.classList.add('note');// giving div a class
     const htmlData =`<div class="operation">
@@ -32,6 +35,8 @@ const textarea= note.querySelector('textarea');
 delButton.addEventListener('click',()=>{
     note.remove();
     updateLocalStorageArea();// to ufate the local storage 
+    const count = document.querySelector('.count');
+    count.innerHTML =`total saved notes ${localStorage.getItem('count')}`;
 });
 textarea.value = text;
 mainDiv.innerHTML =text;
@@ -39,6 +44,8 @@ editButton.addEventListener('click',()=>{
     mainDiv.classList.toggle('hidden'); // if u click on edit button then main div will hide and textarea will show up vise-versa
 
     textarea.classList.toggle('hidden');
+    const count = document.querySelector('.count');
+    count.innerHTML =`total saved notes ${localStorage.getItem('count')}`;
 });
 textarea.addEventListener('change',(event) =>{
     const value1 = event.target.value;
@@ -53,6 +60,8 @@ document.body.appendChild(note);
 // getting data back from local storage
 const notes = JSON.parse(localStorage.getItem('notes'))
 if(notes){
-    notes.forEach((note)=>addNewNote(note))
-};
+    notes.forEach((note)=>addNewNote(note));
+    const count = document.querySelector('.count');
+    count.innerHTML =`total saved notes ${localStorage.getItem('count')}`;
+}
 addButton.addEventListener('click',()=>addNewNote());
