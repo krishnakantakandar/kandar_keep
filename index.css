@@ -1,0 +1,103 @@
+.hidden{
+    display: none;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.heading{
+    height: 10vh;
+    width: 100vw;
+    background-color: rgb(250, 163, 32);
+}
+.logo{
+    margin-left: 5%;
+    width: 200px;
+    height: 200px;
+    margin-top: 2%;
+    color: rgb(53, 36, 14);
+    font-size: large;
+}
+.note{
+   background-color: rgb(255, 255, 255);
+    width: 20vw;
+    height: 15vh;
+    margin: 10px;
+    box-shadow: 0 0 0 , 0 1px 10px 0 ;
+    position: relative;
+    padding: 1%;
+   float:  left;
+    
+   
+}
+textarea{
+    width: 100%;
+    height: 100%;
+}
+.btn-div{
+   float: right;
+   margin-top: 2%;
+   height: 30px;
+  
+   width: 90px;
+   border: 1px solid black;
+
+}
+.btn-div button{
+   
+
+    height: 100%;
+    width: 100%;
+}
+.btn-div button circle{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: brown;
+}
+.edit{
+    position: absolute;
+    right: 13%;
+    background-color: cadetblue;
+    border-radius: 50%;
+    
+}
+.delete{
+    position: absolute;
+    right: 2%;
+    background-color: rgb(192, 105, 105);
+    border-radius: 50%;
+}
+body{
+    background-color: rgb(223, 217, 217);
+    
+   
+}
+.edit:hover{
+    box-shadow: 0 0 0 , 0 1px 10px 0 ;
+    background-color: aliceblue;
+}
+.delete:hover{
+    box-shadow: 0 0 0 , 0 1px 10px 0 ;
+    background-color: aliceblue;
+}
+@media screen and (max-width:500px){
+    .note{
+        background-color: rgb(255, 255, 255);
+         width: 90vw;
+         height: 15vh;
+         margin: 10px;
+         box-shadow: 0 0 0 , 0 1px 10px 0 ;
+         position: relative;
+         padding: 1%;
+        float:  left;
+         
+        
+     }
+ 
+     
+
+
+    
+}
